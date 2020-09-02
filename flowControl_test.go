@@ -26,7 +26,7 @@ func TestRollWindow_WaitLock(t *testing.T) {
 		wg.Add(1)
 		go func() {
 			for j := 0; j < count/10; j++ {
-				rw.Wait()
+				rw.WaitLock()
 			}
 			wg.Done()
 		}()
